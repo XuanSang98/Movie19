@@ -2,7 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data />
+    <data>
+        <variable
+            name="movie"
+            type="com.sunasterisk.movie19.data.model.Movie" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -20,6 +24,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
+                imageUrl="@{movie.posterPath}"
                 android:layout_width="@dimen/dp_170"
                 android:layout_height="@dimen/dp_260"
                 android:contentDescription="@null"
@@ -37,6 +42,7 @@
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
             android:singleLine="true"
+            android:text="@{movie.title}"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sp_20"
             app:layout_constraintBottom_toBottomOf="parent"

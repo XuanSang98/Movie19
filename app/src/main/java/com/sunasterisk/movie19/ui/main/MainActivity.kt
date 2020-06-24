@@ -9,7 +9,9 @@ import com.sunasterisk.movie19.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
+
     override val layoutId get() = R.layout.activity_main
+
     private val navHostFragment: NavHostFragment? by lazy {
         supportFragmentManager.findFragmentById(R.id.fragmentMain) as NavHostFragment?
     }

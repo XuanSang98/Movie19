@@ -9,6 +9,7 @@ abstract class BaseActivity : AppCompatActivity() {
     @get:LayoutRes
     protected abstract val layoutId: Int
     protected abstract fun initComponents()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutId)
